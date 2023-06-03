@@ -1,0 +1,16 @@
+<h1>Fakebook</h1>
+
+<table>
+  <tr>
+    <th>内容</th>
+  </tr>
+
+<% @pictures.each do |picture| %>
+  <tr>
+    <td><%= picture.content %></td>
+    <td><%= link_to '詳細を確認' , picture_path(picture.id) %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New Post' , new_picture_path %>
