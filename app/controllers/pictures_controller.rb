@@ -18,6 +18,9 @@ class PicturesController < ApplicationController
     end
   end
 
+  def confirm
+    @picture = Picture.new(picture_params)
+
   def show
   end
 
