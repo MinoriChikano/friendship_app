@@ -1,4 +1,6 @@
 class PicturesController < ApplicationController
+  before_action :set_blog, only: [:show, :edit, :update]
+  
   def index
     @pictures = Picture.all
   end
@@ -17,11 +19,9 @@ class PicturesController < ApplicationController
   end
 
   def show
-    @picture = Picture.find(params[:id])
   end
 
   def edit
-    @picture = Picture.find(params[:id])
   end
 
   def update
@@ -32,10 +32,14 @@ class PicturesController < ApplicationController
       render :edit
     end
   end
-  
+
   private
 
   def picture_params
     params.require(:picture).permit(:content)
+  end
+
+  def set_blog
+    @blog = Picture.find(params[:id])
   end
 end
