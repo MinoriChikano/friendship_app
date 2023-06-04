@@ -11,10 +11,14 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.create(picture_params)
-    if @picture.save
-      redirect_to pictures_path, notice: "作成しました"
-    else
+    if params[:back]
       render :new
+    else
+      if @picture.save
+        redirect_to pictures_path, notice: "作成しました"
+      else
+        render :new
+      end
     end
   end
 
