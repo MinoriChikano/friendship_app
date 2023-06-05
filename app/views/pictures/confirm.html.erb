@@ -7,4 +7,9 @@
   <%= form.submit  "登録する" %>
 
   <%= form.submit "戻る", name: 'back' %>
+
+  <%= form.hidden_field :image_cache %>
+  
+  <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %>
+  
 <% end %>
