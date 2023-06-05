@@ -19,7 +19,7 @@ class PicturesController < ApplicationController
       else
         render :new
       end
-    en
+    end
   end
 
   def show
