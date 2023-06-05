@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+ tml {
+    font-size: 95%;
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    background-color: blueviolet;
+    
+  }
+
+  .header {
+    background-color: blueviolet;
+    height: 60px;
+    text-align: center
+  }
+
+  .footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center
+  }
