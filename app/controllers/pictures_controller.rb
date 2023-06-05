@@ -22,12 +22,6 @@ class PicturesController < ApplicationController
     end
   end
 
-  def confirm
-    @picture = Picture.new(picture_params)
-    binding.pry
-    render :new if @picture.invalid?
-  end
-
   def show
   end
 
@@ -46,6 +40,11 @@ class PicturesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def confirm
+    @picture = Picture.new(picture_params)
+    render :new if @picture.invalid?
   end
 
   private
