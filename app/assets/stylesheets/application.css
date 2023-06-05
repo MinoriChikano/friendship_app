@@ -14,9 +14,11 @@
  *= require_self
  */
 
- tml {
+  html {
     font-size: 95%;
+    color: aliceblue;
     height: 100%;
+    text-align: center
   }
 
   body {
