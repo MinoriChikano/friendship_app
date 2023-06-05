@@ -18,7 +18,7 @@
     font-size: 95%;
     color: aliceblue;
     height: 100%;
-    text-align: center
+    text-align: center;
   }
 
   body {
@@ -27,15 +27,20 @@
     
   }
 
+  .index{
+    padding-left: 31%;
+  }
+
   .header {
     background-color: blueviolet;
     height: 60px;
-    text-align: center
+    text-align: center;
+    top: 100;
   }
 
   .footer{
     width: 100%;
     position: absolute;
-    bottom: 0;
-    text-align: center
+    bottom: 20;
+    text-align: center;
   }

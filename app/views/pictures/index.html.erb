@@ -1,20 +1,22 @@
 <p><%= notice %></p>
 
-<table>
-  <tr>
-    <th>ユーザー</th>
-    <th>内容</th>
-  </tr>
-
 <% @pictures.each do |picture| %>
+  <div class = "index">
+  <table>
   <tr>
+    <th>ユーザー:</th>
     <td><%= picture.user.name %></td>
+    <th>内容:</th>
     <td><%= picture.content %></td>
-    <td><%= link_to '詳細を確認' , picture_path(picture.id) %></td>
-    <td><%= link_to "編集する" , edit_picture_path(picture.id) %></td>
-    <td><%= link_to "削除する" , picture_path(picture.id), method: :delete %></td>
+    <th>詳細:</th>
+    <td><%= link_to '📕' , picture_path(picture.id) %></td>
+    <th>edit:</th>
+    <td><%= link_to '✏️' , edit_picture_path(picture.id) %></td>
+    <th>delete</th>
+    <td><%= link_to '🆑' , picture_path(picture.id), method: :delete %></td>
   </tr>
 <% end %>
 </table>
+</div>
 
-<%= link_to 'New Post' , new_picture_path %>
+

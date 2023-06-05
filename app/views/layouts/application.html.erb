@@ -18,7 +18,8 @@
    <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
    <% end %>
-
+   <br>
+   <br>
    <% if logged_in? %>
      <%= link_to "Profile", user_path(current_user.id) %>
      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
@@ -29,7 +30,8 @@
 
    <%= yield %>
    <footer class="footer">
-     <%= link_to "戻る", pictures_path %>
+     <p><%= link_to 'Create' , new_picture_path %></p>
+     <p><%= link_to "Index", pictures_path %></P>
      <p>⚡️プログラミング修行僧💻</p>
    </footer>
 

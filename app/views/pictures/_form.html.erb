@@ -13,16 +13,17 @@
 
   <div class="picture_content">
     <%= form.label :content %>
+    <br>
     <%= form.text_field :content %>
   </div>
   
   <div class="field">
     <%= form.label :image %>
+    <br>
     <%= form.file_field :image %>
+
     <%= form.hidden_field :image_cache %>
   </div>
 
   <%= form.submit %>
 <% end %>
-
-<%= link_to 'Back Home' , pictures_path %>
