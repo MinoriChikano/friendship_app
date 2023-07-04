@@ -22,6 +22,8 @@ gem 'bcrypt'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'rexml'
+
 group :development, :test do
 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -36,6 +38,12 @@ group :development do
   gem 'listen', '~> 3.3'
 
   gem 'spring'
+
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'launchy'
 end
 
 group :test do
@@ -48,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'dotenv-rails'
+gem 'fog-aws'
